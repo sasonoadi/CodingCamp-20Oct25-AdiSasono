@@ -1,4 +1,20 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // Navbar Toggle Mobile
+  const menuBtn = document.getElementById("menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+
+  // Tutup menu saat salah satu link diklik
+  const menuLinks = mobileMenu.querySelectorAll("a");
+  menuLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      mobileMenu.classList.add("hidden");
+    });
+  });
+
   // Welcoming Speech (Hi, Name)
   const usernameSpan = document.getElementById("username");
   const name = prompt("Masukkan nama kamu:");
