@@ -15,5 +15,103 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body></body>
+  <body class="font-[Inter] bg-gray-50 text-gray-800 scroll-smooth">
+    <!-- Navbar -->
+    <header class="border-b bg-white shadow-sm fixed w-full top-0 z-50">
+      <nav class="flex justify-between items-center px-6 py-4 max-w-6xl mx-auto">
+        <div class="flex items-center gap-2">
+          <img src="assets/img/profile.jpg" alt="Logo" class="w-10 h-10 rounded-full" />
+          <span class="font-semibold text-lg">Adi Sasono</span>
+        </div>
+        <ul class="flex gap-6 text-sm font-medium">
+          <li><a href="#home" class="hover:text-blue-500">Home</a></li>
+          <li><a href="#profile" class="hover:text-blue-500">Our Profile</a></li>
+          <li><a href="#portfolio" class="hover:text-blue-500">Portfolio</a></li>
+          <li><a href="#contact" class="hover:text-blue-500">Message Us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="text-center pt-28 pb-16">
+      <h1 id="welcome" class="text-3xl font-semibold mb-2">Hi, <span id="username" class="text-blue-500">Guest</span> 👋</h1>
+      <p class="text-gray-600">Selamat datang di portofolio saya</p>
+      <div class="mt-10 w-4/5 md:w-2/3 mx-auto">
+        <img src="assets/img/profile.jpg" alt="Profile Banner" class="rounded-xl shadow-md mx-auto" />
+      </div>
+    </section>
+
+    <!-- Our Profile Section -->
+    <section id="profile" class="py-16 bg-white border-t border-gray-200">
+      <div class="max-w-5xl mx-auto px-6 text-center">
+        <h2 class="text-2xl font-bold mb-6">Our Profile</h2>
+        <div class="flex flex-col md:flex-row items-center gap-8">
+          <img src="assets/img/profile.jpg" alt="Profile Photo" class="w-48 h-48 rounded-full shadow-md mx-auto" />
+          <div class="text-left">
+            <p class="text-gray-700 leading-relaxed mb-2">Halo, saya <strong>Adi Sasono</strong> — mahasiswa Sistem Informasi yang memiliki ketertarikan di bidang pengembangan web dan kecerdasan buatan.</p>
+            <p class="text-gray-700 leading-relaxed mb-2">Saya berpengalaman membuat aplikasi berbasis <strong>Flask</strong>, <strong>Laravel</strong>, dan <strong>Firebase</strong>.</p>
+            <p class="text-gray-700 leading-relaxed">Saat ini, saya sedang mengerjakan proyek <em>ScanToYum</em> — sistem deteksi bahan makanan otomatis yang memberikan rekomendasi resep secara langsung.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-16 bg-gray-50 border-t border-gray-200 text-center">
+      <h2 class="text-2xl font-bold mb-10">Portfolio</h2>
+      <div class="flex flex-wrap justify-center gap-8 max-w-6xl mx-auto">
+        <div class="w-72 bg-white rounded-lg shadow-md hover:shadow-lg transition">
+          <img src="assets/project1.jpg" class="rounded-t-lg" alt="Project 1" />
+          <div class="p-4">
+            <h3 class="font-semibold">Sistem Deteksi Bahan Makanan</h3>
+            <p class="text-sm text-gray-600 mt-1">Web berbasis YOLOv8 dengan rekomendasi resep otomatis.</p>
+          </div>
+        </div>
+        <div class="w-72 bg-white rounded-lg shadow-md hover:shadow-lg transition">
+          <img src="assets/project2.jpg" class="rounded-t-lg" alt="Project 2" />
+          <div class="p-4">
+            <h3 class="font-semibold">Dashboard Karyawan PT Maju Jaya</h3>
+            <p class="text-sm text-gray-600 mt-1">Aplikasi Flask + MySQL dengan sistem login admin-user.</p>
+          </div>
+        </div>
+        <div class="w-72 bg-white rounded-lg shadow-md hover:shadow-lg transition">
+          <img src="assets/project3.jpg" class="rounded-t-lg" alt="Project 3" />
+          <div class="p-4">
+            <h3 class="font-semibold">Landing Page Clovera</h3>
+            <p class="text-sm text-gray-600 mt-1">Produk minyak urut daun cengkeh dengan desain elegan.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Message Us Section -->
+    <section id="contact" class="py-16 px-6 bg-white border-t border-gray-200">
+      <h2 class="text-2xl font-bold mb-8 text-center">Message Us</h2>
+
+      <div class="max-w-6xl mx-auto flex flex-wrap justify-between gap-8">
+        <form id="messageForm" class="flex flex-col gap-3 w-full md:w-[45%] bg-gray-50 p-6 rounded-lg shadow">
+          <label>Nama</label>
+          <input type="text" id="name" placeholder="Nama" class="border rounded px-3 py-2" required />
+
+          <label>Email</label>
+          <input type="email" id="email" placeholder="Email" class="border rounded px-3 py-2" required />
+
+          <label>Pesan</label>
+          <textarea id="messageText" placeholder="Pesan" class="border rounded px-3 py-2" rows="3" required></textarea>
+
+          <button type="submit" class="bg-blue-400 hover:bg-blue-500 text-white font-medium py-2 rounded transition">Kirim</button>
+        </form>
+
+        <div id="result" class="w-full md:w-[45%] bg-gray-50 p-6 rounded-lg shadow">
+          <h3 class="font-semibold mb-3">Hasil Pesan:</h3>
+          <div id="output" class="text-gray-700 text-sm">Belum ada pesan.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t bg-white py-4 px-6 flex justify-end text-sm text-gray-600">Created by Adi Sasono</footer>
+    <!-- JS -->
+    <script src="js/script.js"></script>
+  </body>
 </html>
